@@ -1,8 +1,8 @@
 
-# BloxPVP Leak - AmySox
+# BloxPVP Leak - 
 
 
-This is a guide to getting started with BloxPVP Leak - AmySox. Follow these instructions to set up the project locally on your machine.
+This is a guide to getting started with BloxPVP Leak -  Follow these instructions to set up the project locally on your machine.
 
 Figma: https://figma.com/file/Qlff2LjgChKmrT6ZXG02ug/Untitled
 
