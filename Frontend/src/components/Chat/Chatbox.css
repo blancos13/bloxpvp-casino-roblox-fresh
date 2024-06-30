@@ -1,0 +1,191 @@
+.Chatbox {
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+  border-radius: 10px;
+  width: auto;
+  > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px #863aff solid;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  > img:hover {
+    opacity: 0.7;
+  }
+  .Content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    width: 100%;
+    .Username {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2px;
+      h1 {
+        font-weight: 600;
+        font-size: 15px;
+        color: #863aff;
+      }
+      .Timestamp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #1d1d2c;
+        background-blend-mode: overlay;
+        border-radius: 15px;
+        border: 0.5px rgba(66, 55, 55, 0.3) solid;
+        height: 14px;
+        width: 33.44px;
+        font-size: 9px;
+        font-weight: 300;
+        text-align: center;
+        p {
+          color: rgba(255, 255, 255, 0.3);
+        }
+      }
+    }
+    > .message {
+      color: #bfbfcd;
+      background-color: #1d1d2c;
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 15px;
+      overflow-wrap: anywhere;
+    }
+  }
+}
+
+.Chatbox.Whale {
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+  border-radius: 10px;
+  width: auto;
+  > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px #2eb9dc solid;
+  }
+  .Content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    width: 100%;
+    .Username {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2px;
+      .User {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        h1 {
+          font-weight: 600;
+          font-size: 15px;
+          color: #2eb9dc;
+        }
+      }
+      .Timestamp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #1d1d2c;
+        background-blend-mode: overlay;
+        border-radius: 15px;
+        border: 0.5px rgba(66, 55, 55, 0.3) solid;
+        height: 14px;
+        width: 33.44px;
+        font-size: 9px;
+        font-weight: 300;
+        text-align: center;
+        p {
+          color: rgba(255, 255, 255, 0.3);
+        }
+      }
+    }
+    > .message {
+      color: #bfbfcd;
+      background-color: #1d1d2c;
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 15px;
+      overflow-wrap: anywhere;
+    }
+  }
+}
+
+.Chatbox.Owner {
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+  border-radius: 10px;
+  width: auto;
+  > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px #ffc34e solid;
+  }
+  .Content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    width: 100%;
+    .Username {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2px;
+      .User {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        h1 {
+          font-weight: 600;
+          font-size: 15px;
+          color: #ffc34e;
+        }
+      }
+      .Timestamp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #1d1d2c;
+        background-blend-mode: overlay;
+        border-radius: 15px;
+        border: 0.5px rgba(66, 55, 55, 0.3) solid;
+        height: 14px;
+        width: 33.44px;
+        font-size: 9px;
+        font-weight: 300;
+        text-align: center;
+        p {
+          color: rgba(255, 255, 255, 0.3);
+        }
+      }
+    }
+    > .message {
+      color: #bfbfcd;
+      background-color: #1d1d2c;
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 15px;
+      overflow-wrap: anywhere;
+    }
+  }
+}

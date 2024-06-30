@@ -1,0 +1,819 @@
+.MarketplacePage {
+  background-image: url("../../assets/images/homeBackground.svg");
+  background-position: 60%;
+  background-size: cover;
+  background-color: #0d0b1b;
+  border-top: #322e58 2px solid;
+  padding: 30px 0px 0px 40px;
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  border-left: #322e58 2px solid;
+  box-sizing: border-box;
+  .ContainerLoading {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    .loading {
+      width: 25px;
+      height: 25px;
+      border: 3px solid rgb(49, 44, 70);
+      border-radius: 50%;
+      border-top: 3px solid #863aff;
+      animation: spin 0.5s linear infinite;
+    }
+    p {
+      color: #717171;
+      font-weight: 500;
+      font-style: italic;
+    }
+  }
+  .Filter {
+    border: 2px solid transparent;
+    background: linear-gradient(#1e1c35, #141223) padding-box,
+      linear-gradient(to bottom, #3c376a, #282446) border-box;
+    border-radius: 10px;
+    max-width: 302px;
+    width: 100%;
+    max-height: 597px;
+    height: 100%;
+    padding: 17px 12px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    > .Filtering {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .Top {
+        display: flex;
+        justify-content: space-between;
+        h2 {
+          font-weight: 500;
+          font-size: 15px;
+          color: white;
+        }
+        .Closing {
+          display: flex;
+          gap: 5px;
+          align-items: center;
+          p {
+            color: white;
+            font-weight: 400;
+            font-size: 13px;
+          }
+        }
+      }
+      .Range {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        p {
+          font-weight: 500;
+          font-size: 15px;
+          color: white;
+        }
+        .Slider {
+          border: 1px solid #282242;
+          background: #151223;
+          box-shadow: 0px 4px 4px 0px #00000026 inset;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 20px 15px;
+          border-radius: 10px;
+          input {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 4px;
+            background: #19172c;
+            outline: none;
+            -webkit-transition: 0.2s;
+            transition: 0.2s;
+            position: relative;
+          }
+          input::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            background: #ffffff;
+            box-shadow: 0px 0px 7.5px 0px #ffffff4d;
+            height: 8px;
+            width: 8px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: 0.2s ease-in-out;
+          }
+          input::-moz-range-thumb {
+            background: #ffffff;
+            box-shadow: 0px 0px 7.5px 0px #ffffff4d;
+            height: 8px;
+            width: 8px;
+            cursor: pointer;
+            border-radius: 50%;
+          }
+        }
+      }
+      .Category {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        p {
+          font-weight: 500;
+          color: white;
+          font-size: 15px;
+        }
+        .Categories {
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          gap: 12px;
+          div {
+            flex: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px 0px;
+            border-radius: 5px;
+            p {
+              color: white;
+              font-weight: 400;
+              font-size: 10px;
+            }
+          }
+          .Purple {
+            background: linear-gradient(180deg, #110e21 0%, #201936 100%);
+            border: 1px solid #863aff;
+            box-shadow: 0px 0px 8.699999809265137px 0px #863aff26;
+          }
+          .Yellow {
+            background: linear-gradient(180deg, #110e21 0%, #362a19 100%);
+            border: 1px solid #ffb03a;
+            box-shadow: 0px 0px 9.800000190734863px 0px #ffb03a26;
+          }
+        }
+      }
+    }
+    .Info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .Copyright {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        h3 {
+          color: white;
+          font-weight: 500;
+          font-size: 12px;
+        }
+        .SubText {
+          font-weight: 300;
+          font-size: 10px;
+          color: white;
+          opacity: 50%;
+        }
+      }
+      .Links {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .Link {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 8px 12px;
+          border: 1px solid transparent;
+          border-radius: 5px;
+          cursor: pointer;
+          background: linear-gradient(180deg, #1b192f 0%, #2e214e 100%)
+              padding-box,
+            linear-gradient(to bottom, #36325f, #60449c) border-box;
+          p {
+            font-weight: 500;
+            font-size: 10px;
+            color: white;
+          }
+          img {
+            width: 9px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+  .Market {
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+    .Interaction {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 20px;
+      .Options {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        .Search {
+          border: 1px solid #863aff;
+          text-align: center;
+          color: white;
+          box-shadow: 0px 10px 7.800000190734863px 0px #00000026;
+          background: linear-gradient(180deg, #100d20 0%, #201936 100%);
+          height: 38px;
+          width: 190px;
+          outline: none;
+          border-radius: 8px;
+          font-size: 12px;
+          font-weight: 400;
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          box-sizing: border-box;
+          padding: 10px;
+          gap: 5px;
+          img {
+            width: 17px;
+            height: 17px;
+          }
+          p {
+            font-weight: 400;
+            font-size: 10px;
+          }
+        }
+        .Select {
+          background: linear-gradient(180deg, #110e21 0%, #362a19 100%);
+          border: 1px solid #ffb03a;
+          box-shadow: 0px 10px 7.800000190734863px 0px #00000026;
+          width: 160px;
+          height: 38px;
+          border-radius: 8px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-sizing: border-box;
+          padding: 10px;
+          gap: 30px;
+          p {
+            font-weight: 400;
+            font-size: 10px;
+            color: white;
+          }
+        }
+      }
+      .Sales {
+        position: relative;
+        display: flex;
+        height: 38px;
+        .Cart {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer;
+          width: 104px;
+          height: 38px;
+          box-shadow: 0px 0px 31.399999618530273px 0px #853aff56;
+          border: 1px solid transparent;
+          background: linear-gradient(180deg, #af5fff 0%, #7b00dc 100%)
+              padding-box,
+            linear-gradient(to bottom, #fdb7ff, #7b00dc) border-box;
+          border-radius: 10px;
+          padding: 10px;
+          box-sizing: border-box;
+          user-select: none;
+          p {
+            font-weight: 400;
+            font-size: 11px;
+            color: white;
+          }
+          img {
+            width: 15px;
+            height: auto;
+          }
+          .Arrow {
+            width: 11px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+  .Listings::-webkit-scrollbar {
+    width: 3px;
+  }
+  .Listings::-webkit-scrollbar-thumb {
+    box-shadow: 0px 0px 5.800000190734863px 0px #863aff57;
+  }
+  .Listings {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    overflow-y: auto;
+    height: 100%;
+    padding: 0px 10px 0px 5px;
+    .MyListings {
+      .Header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 0px 0px 20px 0px;
+        .HeadingText {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          flex-wrap: nowrap;
+          img {
+            width: 25px;
+            height: 25px;
+          }
+          h2 {
+            font-weight: 700;
+            font-size: 16px;
+            background: #863aff;
+            background-blend-mode: overlay;
+            background: linear-gradient(#c257ff, #863aff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-wrap: nowrap;
+          }
+        }
+        .LineGradient {
+          background: linear-gradient(
+            90deg,
+            #a549ff 0%,
+            rgba(134, 58, 255, 0) 100%
+          );
+          height: 2px;
+          width: 100%;
+          border-radius: 11px;
+        }
+      }
+      .CurrentListings {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(291px, 1fr));
+        gap: 15px;
+        .ListItems {
+          height: 165px;
+          border-radius: 10px;
+          border: 1px solid transparent;
+          box-shadow: 0px 0px 18.200000762939453px 0px #b350ff40;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 15px;
+          background: linear-gradient(to bottom left, #863aff, #c257ff, #863aff)
+              padding-box,
+            linear-gradient(to bottom left, #ff76ff, #ffaaff, #ff76ff)
+              border-box;
+          transition: 0.15s ease-in-out;
+          p {
+            color: white;
+            font-weight: 600;
+            font-size: 13px;
+          }
+        }
+        .ListItems:hover {
+          cursor: pointer;
+          transform: scale(0.95);
+          opacity: 80%;
+          box-shadow: 0px 0px 18.200000762939453px 0px #b350ff6c;
+        }
+        .MyListing {
+          height: 165px;
+          background: linear-gradient(#1f1c35, #151425) padding-box,
+            linear-gradient(#863aff, #29274a) border-box;
+          border: 1.2px solid transparent;
+          border-radius: 10px;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+          padding: 5px;
+          gap: 10px;
+          .Information {
+            width: 126px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            .Image {
+              background-image: url("../../assets/images/listingBackground.svg");
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center;
+              background-color: #141121;
+              background-blend-mode: overlay;
+              width: 126px;
+              min-height: 107px;
+              border-radius: 7px;
+              box-shadow: 0px 6px 4.5px 0px #0000001a inset;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              > .PS99 {
+                position: relative;
+                width: max-content;
+                display: flex;
+                align-items: center;
+                .foregroundImage {
+                  width: 65px;
+                  height: 65px;
+                  border: 0.1em solid #a095de;
+                  border-radius: 10px;
+                  z-index: 2;
+                  pointer-events: none;
+                }
+                .backgroundImage {
+                  position: absolute;
+                  border-radius: 10px;
+                  width: 65px;
+                  height: 65px;
+                  top: 0px;
+                  left: 0px;
+                  z-index: 1;
+                  filter: blur(15px);
+                  opacity: 30%;
+                }
+              }
+              .ImageContainer {
+                position: relative;
+                width: 65px;
+                height: 65px;
+                display: flex;
+                align-items: center;
+                border: 1.5px solid #a095de;
+                border-radius: 10px;
+                .foregroundImage {
+                  width: 65px;
+                  height: 65px;
+                  border-radius: 10px;
+                  z-index: 2;
+                  pointer-events: none;
+                }
+                .backgroundImage {
+                  position: absolute;
+                  width: 65px;
+                  height: 65px;
+                  top: 0px;
+                  left: 0;
+                  z-index: 1;
+                  filter: blur(10px);
+                }
+              }
+            }
+            .ItemInfo {
+              flex: auto;
+              display: flex;
+              width: 126px;
+              align-items: center;
+              gap: 10px;
+              .Info {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                .Name {
+                  font-weight: 600;
+                  font-size: 11px;
+                  width: 100px;
+                  color: white;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  overflow: hidden;
+                }
+                .PriceInfo {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  width: 100%;
+                  .Price {
+                    color: #863aff;
+                    font-weight: 500;
+                    font-size: 13px;
+                  }
+                  .Rate {
+                    display: flex;
+                    align-items: center;
+                    opacity: 50%;
+                    gap: 2px;
+                    .RateIcon {
+                      border: none;
+                      width: auto;
+                      height: 9px;
+                    }
+                    span {
+                      font-weight: 400;
+                      font-size: 9px;
+                      color: white;
+                    }
+                  }
+                }
+              }
+              .Interactions {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 5px;
+                width: 10px;
+                img {
+                  width: 10px;
+                  height: auto;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+          .Editing {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: calc(100% - 10px);
+            padding: 5px 0px;
+            .Heading {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              img {
+                height: 13px;
+                width: 13px;
+              }
+              h2 {
+                font-weight: 700;
+                font-size: 12px;
+                background: #863aff;
+                background-blend-mode: overlay;
+                background: linear-gradient(#c257ff, #863aff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-wrap: nowrap;
+              }
+            }
+            .Name {
+              font-weight: 600;
+              color: white;
+              font-size: 10px;
+            }
+            .EditInfo {
+              p {
+                color: rgba(255, 255, 255, 0.5);
+                font-size: 9px;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 3px;
+                .PriceSpan {
+                  color: #ffb03a;
+                }
+                .ValueSpan {
+                  color: #3a89ff;
+                }
+                .RateSpan {
+                  color: #ff3a3a;
+                  display: flex;
+                  align-items: center;
+                  gap: 2px;
+                }
+              }
+            }
+            .RangeSlider {
+              p {
+                color: white;
+                opacity: 50%;
+                font-size: 9px;
+              }
+              .Slider {
+                border: 1px solid #282242;
+                background: #151223;
+                box-shadow: 0px 4px 4px 0px #00000026 inset;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 22px;
+                width: 130px;
+                border-radius: 5px;
+                box-sizing: border-box;
+                padding: 5px 7px;
+                input {
+                  -webkit-appearance: none;
+                  appearance: none;
+                  width: 100%;
+                  height: 2px;
+                  background: #19172c;
+                  outline: none;
+                  -webkit-transition: 0.2s;
+                  transition: 0.2s;
+                  position: relative;
+                }
+                input::-webkit-slider-thumb {
+                  -webkit-appearance: none;
+                  appearance: none;
+                  background: #ffffff;
+                  box-shadow: 0px 0px 7.5px 0px #ffffff4d;
+                  height: 4px;
+                  width: 4px;
+                  cursor: pointer;
+                  border-radius: 50%;
+                  transition: 0.2s ease-in-out;
+                }
+                input::-moz-range-thumb {
+                  background: #ffffff;
+                  box-shadow: 0px 0px 7.5px 0px #ffffff4d;
+                  height: 8px;
+                  width: 8px;
+                  cursor: pointer;
+                  border-radius: 50%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .Separation {
+      height: 1px;
+      width: 100%;
+      border-bottom: #2c264c dashed 6px;
+      transform: scaleY(0.3);
+    }
+    .OtherListings {
+      margin-bottom: 80px;
+      .Header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 15px;
+        .HeadingText {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          width: 163px;
+          flex-wrap: nowrap;
+          img {
+            width: 25px;
+            height: 25px;
+          }
+          h2 {
+            font-weight: 700;
+            font-size: 16px;
+            background: #863aff;
+            background-blend-mode: overlay;
+            background: linear-gradient(#c257ff, #863aff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-wrap: nowrap;
+          }
+        }
+        .LineGradient {
+          background: linear-gradient(
+            90deg,
+            #a549ff 0%,
+            rgba(134, 58, 255, 0) 100%
+          );
+          height: 2px;
+          width: 100%;
+          border-radius: 11px;
+        }
+      }
+      .OtherItems {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(138px, 1fr));
+        gap: 15px;
+        .OtherListing {
+          height: 165px;
+          background: linear-gradient(#1f1c35, #151425) padding-box,
+            linear-gradient(#3d376a, #29274a) border-box;
+          border: 1.2px solid transparent;
+          border-radius: 10px;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          padding: 5px;
+          cursor: pointer;
+          user-select: none;
+          .Image {
+            background-image: url("../../assets/images/listingBackground.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: #141121;
+            background-blend-mode: overlay;
+            width: 100%;
+            min-height: 107px;
+            border-radius: 7px 7px 0px 0px;
+            box-shadow: 0px 6px 4.5px 0px #0000001a inset;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            > .PS99 {
+              position: relative;
+              width: max-content;
+              display: flex;
+              align-items: center;
+              .foregroundImage {
+                width: 65px;
+                height: 65px;
+                border: 0.1em solid #a095de;
+                border-radius: 10px;
+                z-index: 2;
+                pointer-events: none;
+              }
+              .backgroundImage {
+                position: absolute;
+                border-radius: 10px;
+                width: 65px;
+                height: 65px;
+                top: 0px;
+                left: 0px;
+                z-index: 1;
+                filter: blur(15px);
+                opacity: 30%;
+              }
+            }
+            .ImageContainer {
+              position: relative;
+              width: 65px;
+              height: 65px;
+              display: flex;
+              align-items: center;
+              border: 1.5px solid #a095de;
+              border-radius: 10px;
+              pointer-events: none;
+              .foregroundImage {
+                width: 65px;
+                height: 65px;
+                border-radius: 10px;
+                z-index: 2;
+                pointer-events: none;
+              }
+              .backgroundImage {
+                position: absolute;
+                width: 65px;
+                height: 65px;
+                top: 0px;
+                left: 0;
+                z-index: 1;
+                filter: blur(10px);
+              }
+            }
+          }
+          .Info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            .Name {
+              font-weight: 600;
+              font-size: 11px;
+              color: white;
+            }
+            .PriceInfo {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              width: 100%;
+              .Price {
+                color: #863aff;
+                font-weight: 500;
+                font-size: 13px;
+              }
+              .Rate {
+                display: flex;
+                align-items: center;
+                opacity: 50%;
+                gap: 2px;
+                .RateIcon {
+                  border: none;
+                  width: auto;
+                  height: 9px;
+                }
+                p {
+                  font-weight: 400;
+                  font-size: 9px;
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1330px) {
+  .MarketplacePage {
+    padding: 30px 15px 0px 20px !important;
+  }
+  .Market {
+    padding: 0px 5px 0px 0px !important;
+  }
+  .Filter {
+    display: none !important;
+  }
+}

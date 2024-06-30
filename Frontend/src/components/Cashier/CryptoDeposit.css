@@ -1,0 +1,324 @@
+.ModalBackground {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1e1834;
+  .CryptoDepositModal {
+    max-width: 501px;
+    width: 100%;
+    background: #1f1733;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    box-sizing: border-box;
+    margin: 10px;
+    > .Header {
+      background: #151027;
+      width: 100%;
+      height: 250px;
+      border: 5px solid #20183680;
+      border-bottom: none;
+      border-radius: 15px 15px 0px 0px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 7px 10px;
+      background-image: url("../../assets/images/homeBackground.svg");
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: soft-light;
+      box-sizing: border-box;
+      > p {
+        font-weight: 500;
+        color: white;
+        font-size: 13px;
+        span {
+          font-weight: 600;
+          background: linear-gradient(#c257ff, #863aff);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      .QR {
+        border-radius: 5px;
+        width: 138px;
+        height: 138px;
+      }
+      .Navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        .Nav {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          img {
+            height: 34px;
+            width: 34px;
+          }
+          .NavLinks {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            .NavLink {
+              font-size: 14px;
+              cursor: pointer;
+            }
+            .NavLink.Active {
+              background: linear-gradient(#c257ff, #863aff);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              font-weight: 700;
+              position: relative;
+            }
+            .NavLink.Active::after {
+              content: "";
+              width: 100%;
+              height: 1px;
+              background: #a74aff;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+            }
+            .NavLink.Inactive {
+              font-weight: 400;
+              color: #fff;
+              opacity: 50%;
+            }
+          }
+        }
+        .Navigate {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 7px;
+          cursor: pointer;
+          p {
+            font-size: 10px;
+            color: white;
+            font-weight: 500;
+          }
+          img {
+            width: 6px;
+            height: auto;
+          }
+        }
+      }
+    }
+    > .Bottom {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      .Interaction {
+        display: flex;
+        flex-direction: column;
+        background: #151223;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px 5px 15px 15px;
+        padding: 17px 17px;
+        gap: 20px;
+        > .Currency {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 5px;
+          box-sizing: border-box;
+          .Header {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            gap: 5px;
+            p {
+              font-size: 10px;
+              font-weight: 500;
+              color: white;
+            }
+            div {
+              background: linear-gradient(
+                90deg,
+                #ffffff 0%,
+                rgba(255, 255, 255, 0) 100%
+              );
+              width: 100%;
+              height: 2px;
+            }
+          }
+          .CurrencyList {
+            display: flex;
+            height: 46px;
+            width: 100%;
+            border-radius: 10px;
+            align-items: center;
+            box-sizing: border-box;
+            cursor: pointer;
+            padding: 10px;
+            justify-content: space-between;
+            background: linear-gradient(180deg, #19182d 0%, #1e1733 100%)
+                padding-box,
+              linear-gradient(to bottom, #32305a, #3c2d65) border-box;
+            border: 1px solid transparent;
+            position: relative;
+            .ListSelection {
+              display: flex;
+              flex-direction: column;
+              position: absolute;
+              bottom: -175px;
+              left: -2px;
+              width: calc(100% + 4px);
+              height: 165px;
+              padding: 5px 10px;
+              box-sizing: border-box;
+              border-radius: 10px;
+              border: 1px solid transparent;
+              user-select: none;
+              background: linear-gradient(180deg, #151223 0%, #1e1733 100%)
+                  padding-box,
+                linear-gradient(to bottom, #292345, #3b2d65) border-box;
+              .Option {
+                display: flex;
+                align-items: center;
+                flex: 1;
+                gap: 10px;
+                transition: 0.2s;
+                user-select: none;
+                img {
+                  height: 20px;
+                  width: auto;
+                  -webkit-user-drag: none;
+                }
+                p {
+                  color: white;
+                  font-size: 10px;
+                }
+              }
+              .Option:hover {
+                opacity: 0.8;
+              }
+              .Option.Active {
+                p {
+                  background: linear-gradient(#c257ff, #863aff);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  font-weight: 600;
+                }
+              }
+            }
+            .Currency {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              user-select: none;
+              img {
+                height: 23px;
+                width: 23px;
+                user-select: none;
+              }
+              p {
+                color: white;
+                font-size: 11px;
+                font-weight: 500;
+              }
+            }
+            > img {
+              height: 7px;
+              width: auto;
+              user-select: none;
+            }
+          }
+        }
+        > .Address {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 5px;
+          box-sizing: border-box;
+          .Header {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            gap: 5px;
+            p {
+              font-size: 10px;
+              font-weight: 500;
+              color: white;
+              text-wrap: nowrap;
+              user-select: none;
+            }
+            div {
+              background: linear-gradient(
+                90deg,
+                #ffffff 0%,
+                rgba(255, 255, 255, 0) 100%
+              );
+              width: 100%;
+              height: 2px;
+            }
+          }
+          .AddressBox {
+            display: flex;
+            height: 46px;
+            width: 100%;
+            border-radius: 10px;
+            align-items: center;
+            box-sizing: border-box;
+            overflow: hidden;
+            justify-content: space-between;
+            background: linear-gradient(180deg, #19182d 0%, #1e1733 100%)
+                padding-box,
+              linear-gradient(to bottom, #32305a, #3c2d65) border-box;
+            border: 1px solid transparent;
+            padding: 10px;
+            gap: 15px;
+            > img {
+              height: 55px;
+              width: auto;
+              margin-left: -15px;
+              cursor: pointer;
+            }
+            > p {
+              color: white;
+              font-size: 12px;
+              font-weight: 500;
+              font-style: italic;
+              width: 100%;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              margin-left: -15px;
+            }
+            div {
+              background: linear-gradient(180deg, #f971ff 0%, #8b3cff 100%)
+                  padding-box,
+                linear-gradient(to bottom, #ffc1ff, #a148ff) border-box;
+              border: 2px solid transparent;
+              border-radius: 7px;
+              display: flex;
+              min-width: 111px;
+              height: 27px;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              box-shadow: 0px 0px 30px 0px #863aff40;
+              p {
+                color: white;
+                font-weight: 500;
+                font-size: 9px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

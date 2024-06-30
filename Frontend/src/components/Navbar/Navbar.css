@@ -1,0 +1,618 @@
+.Navbar {
+  display: flex;
+  flex-direction: row;
+  background-color: #19172c;
+  gap: 40px;
+  z-index: 99;
+  > img {
+    align-self: center;
+    width: 210px;
+    height: 101px;
+    pointer-events: none;
+    user-select: none;
+  }
+  .Content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .InfoLinks {
+      display: flex;
+      background-color: #0d0b1b;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 2%;
+      width: 100%;
+      min-height: 31px;
+      padding: 0px 0px 0px 0px;
+      border-radius: 0px 0px 0px 8px;
+
+      .Link.Purple {
+        > p {
+          color: #863aff;
+          font-weight: 600;
+          font-size: 10px;
+          text-shadow: 0px 0px 20px rgba(134, 58, 255, 0.68);
+        }
+      }
+
+      .Link:hover {
+        cursor: pointer;
+
+        p:hover {
+          cursor: pointer;
+        }
+      }
+
+      .Link {
+        text-wrap: nowrap;
+      }
+
+      .Raffle {
+        margin-left: 30px;
+      }
+
+      .ImportantLinks {
+        display: flex;
+        padding: 0px 5px;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        height: 18px;
+        width: 320px;
+        background: linear-gradient(#19172c, #19172c) padding-box,
+          linear-gradient(to bottom, hsl(0, 0%, 18%), #19172c) border-box;
+        border: 1px solid transparent;
+        border-radius: 3px;
+        .Link {
+          p {
+            font-size: 10px;
+            color: #ffffff;
+            opacity: 50%;
+            text-wrap: nowrap;
+            text-overflow: ellipsis;
+            white-space: none;
+            overflow: hidden;
+          }
+        }
+        .Responsibility {
+          position: relative;
+        }
+        .Responsibility::before {
+          content: " ";
+          display: block;
+          height: 10px;
+          width: 1.3px;
+          position: absolute;
+          top: 20%;
+          left: -15px;
+          background: #0d0b1b;
+        }
+        .Responsibility::after {
+          content: " ";
+          display: block;
+          height: 10px;
+          width: 1.3px;
+          position: absolute;
+          top: 20%;
+          right: -15px;
+          background: #0d0b1b;
+        }
+      }
+      .FAQ,
+      .TOS {
+        color: #fff;
+        opacity: 50%;
+        font-size: 10px;
+      }
+
+      .Claims {
+        color: #ffad33;
+        font-size: 10px;
+        font-weight: 600;
+        text-shadow: 0px 0px 15px rgba(255, 173, 51, 0.65);
+      }
+
+      .SocialLinks {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+
+        a {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .NavLinks {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 95px;
+      padding: 0px 20px;
+
+      .GameLinks {
+        display: flex;
+        justify-content: center;
+        max-width: 420px;
+        gap: 15px;
+
+        .GameLink {
+          display: flex;
+          flex-direction: row;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          position: relative;
+          transition: 0.3s;
+          justify-content: center;
+          border: none;
+          padding: 0 !important;
+          text-decoration: none;
+          height: 95px;
+
+          img {
+            width: 19px;
+            height: 19px;
+          }
+
+          p {
+            font-size: 18px;
+            font-weight: 500;
+          }
+        }
+
+        .Active::before {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: 0px;
+          background-color: #7c00ff;
+          height: 2px;
+          width: 100%;
+          border-radius: 19px 19px 0px 0px;
+          box-shadow: 0px -4px 23px 0px #7d00ff;
+        }
+
+        .GameLink:hover {
+          cursor: pointer;
+        }
+
+        .Inactive {
+          background-color: #19172c;
+
+          p {
+            color: #9f9da7;
+          }
+        }
+
+        .Active {
+          p {
+            color: #7c00ff;
+          }
+
+          background-color: #19172c;
+        }
+
+        .Coinflip {
+          background-image: none;
+          width: 100%;
+        }
+
+        .Coinflip.Active {
+          img {
+            content: url("../../assets/images/coinflipActive.svg");
+          }
+        }
+
+        .Coinflip.Inactive {
+          img {
+            content: url("../../assets/images/coinflipInactive.svg");
+          }
+        }
+
+        .Jackpot.Inactive {
+          img {
+            content: url("../../assets/images/jackpotInactive.svg");
+          }
+        }
+
+        .Jackpot.Active {
+          img {
+            content: url("../../assets/images/jackpotActive.svg");
+          }
+        }
+
+        .Marketplace.Active {
+          img {
+            content: url("../../assets/images/marketplaceActive.svg");
+          }
+        }
+
+        .Marketplace.Inactive {
+          img {
+            content: url("../../assets/images/marketplaceInactive.svg");
+          }
+        }
+
+        .Jackpot {
+          width: 100%;
+
+          img {
+            margin-right: -3px;
+          }
+        }
+
+        .Marketplace {
+          width: 550px;
+        }
+      }
+
+      .Wallet {
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.1),
+            rgba(134, 58, 255, 0.3)
+          )
+          border-box;
+        border: 1.5px solid transparent;
+        border-radius: 5px;
+        box-shadow: 0px 5px 6px 0px #00000040;
+
+        .Balance {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 3px;
+          min-width: 130px;
+          height: 47px;
+          padding: 0px 10px;
+          gap: 7px;
+          background: linear-gradient(180deg, #0f0c1f 0%, #201936 100%);
+          background-blend-mode: overlay;
+
+          .ImageContainer {
+            position: relative;
+            width: 9px;
+            height: auto;
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+
+            .foregroundImage {
+              width: 9px;
+              height: auto;
+              z-index: 2;
+              pointer-events: none;
+            }
+
+            .backgroundImage {
+              position: absolute;
+              width: 9px;
+              height: auto;
+              top: 0px;
+              left: 0;
+              z-index: 1;
+              filter: blur(9px);
+            }
+          }
+
+          .Integers {
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 19.5px;
+            color: white;
+
+            .Decimals {
+              font-weight: 500;
+              font-size: 8px;
+              line-height: 12px;
+              opacity: 50%;
+            }
+          }
+        }
+
+        .Deposit {
+          border-radius: 0px 5px 5px 0px;
+          background: #863aff;
+          background-blend-mode: overlay;
+          width: 62px;
+          height: 47px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          p {
+            font-size: 10px;
+            font-weight: 600;
+            line-height: 15px;
+            user-select: none;
+          }
+        }
+
+        .Deposit:hover {
+          cursor: pointer;
+        }
+      }
+
+      .Profile {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+
+        .Money {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 10px;
+
+          .Withdraw {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0px 0px 19px 0px #00ff191a;
+            padding: 0px 30px;
+            border-radius: 5px;
+            border: 2px solid transparent;
+            background: radial-gradient(
+                97.89% 98.89% at 49.59% 120%,
+                rgba(17, 233, 14, 0.753) -10%,
+                rgba(46, 43, 66, 0) 100%
+              ),
+              linear-gradient(180deg, #345a34 70%, #35972e 400%);
+            background-blend-mode: overlay;
+            height: 40px;
+            transition: 0.2s;
+
+            p {
+              color: #3fff52;
+              font-weight: 400;
+              font-size: 14px;
+            }
+          }
+
+          .Withdraw:hover {
+            opacity: 70%;
+            transform: scale(0.95);
+          }
+
+          .Notifications {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #6156a3;
+            height: 40px;
+            width: 40px;
+            border-radius: 5px;
+            background: linear-gradient(#2d2a40, #36285f) padding-box,
+              linear-gradient(to bottom, #5f4c94, #19172c) border-box;
+            box-shadow: 0px 5px 6px 0px #00000040;
+            border: 2px solid transparent;
+
+            img {
+              height: 25px;
+              width: 25px;
+            }
+          }
+        }
+        .User {
+          width: 240px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 10px;
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            box-shadow: 0px 5px 6px 0px #00000040;
+            cursor: pointer;
+            transition: 0.3s;
+          }
+          img:hover {
+            opacity: 0.7;
+          }
+          .ProfileInfo {
+            .Username {
+              color: white;
+              font-weight: 600;
+              font-size: 15px;
+              line-height: 19.5px;
+              width: 120px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+
+            .Level {
+              color: #8000ff;
+            }
+          }
+
+          .Logout {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #6156a3;
+            height: 40px;
+            width: 40px;
+            border-radius: 5px;
+            background: linear-gradient(#2d2a40, #36285f) padding-box,
+              linear-gradient(to bottom, #5f4c94, #19172c) border-box;
+            border: 2px solid transparent;
+            box-shadow: 0px 5px 6px 0px #00000040;
+            cursor: pointer;
+
+            img {
+              height: 25px;
+              width: 25px;
+            }
+          }
+        }
+      }
+      .Login {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(180deg, #a448ff 0%, #873aff 100%);
+        color: white;
+        height: 40px;
+        width: 110px;
+        border-radius: 5px;
+        gap: 5px;
+        font-size: 15px;
+        font-family: Poppins;
+        font-weight: 500;
+        border: 2px solid transparent;
+        box-shadow: 0px 0px 24.700000762939453px 0px #863aff33;
+        transition: 0.1s;
+        &:hover {
+          cursor: pointer;
+          opacity: 80%;
+          transform: scale(0.97);
+        }
+        img {
+          width: 15px;
+          height: 15px;
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .GameLinks {
+    display: none !important;
+  }
+
+  .Navbar > img {
+    display: none;
+  }
+
+  .InfoLinks {
+    border-radius: none !important;
+  }
+
+  .Money > .Withdraw {
+    display: none !important;
+  }
+
+  .NavLinks > .Logo {
+    display: block !important;
+    width: 80px;
+    height: 70px;
+  }
+
+  .Profile > .User > .Logout {
+    display: none !important;
+  }
+
+  .Profile > .User {
+    justify-content: end !important;
+    padding: none !important;
+    width: 100% !important;
+  }
+
+  .ProfileInfo > .Username {
+    max-width: 120px;
+    width: 100% !important;
+  }
+
+  .Wallet > .Deposit {
+    display: none !important;
+  }
+
+  .Wallet > .Cashier {
+    border-radius: 0px 5px 5px 0px;
+    background: #863aff;
+    background-blend-mode: overlay;
+    width: 50px;
+    height: 47px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    p {
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 15px;
+    }
+  }
+
+  .InfoLinks {
+    display: none !important;
+  }
+
+  .Navbar {
+    height: 100% !important;
+  }
+
+  .NavLinks {
+    height: 100% !important;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .Notifications {
+    display: none !important;
+  }
+
+  .NavLinks {
+    justify-content: space-between !important;
+    padding-left: 0 !important;
+  }
+
+  .NavLinks > .Logo {
+    height: 60px !important;
+    width: 60px !important;
+  }
+
+  .GameInteractivity {
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+  .auth-buttons {
+    .Login {
+      height: 35px !important;
+      width: 90px !important;
+      p {
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .ProfileInfo {
+    display: none !important;
+    gap: 0 !important;
+  }
+
+  .NavLinks > .Profile {
+    justify-content: center !important;
+    gap: 0px !important;
+  }
+
+  .Navbar > .NavLinks {
+    gap: 5px !important;
+    padding-right: 5px !important;
+  }
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.space-x-2 {
+  margin-left: 0.5rem;
+}

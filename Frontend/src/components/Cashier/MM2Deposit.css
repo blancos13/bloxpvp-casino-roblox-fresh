@@ -1,0 +1,208 @@
+.ModalBackground {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 104;
+  .loadingContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 105;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .loading {
+      width: 50px;
+      height: 50px;
+      border: 6px solid rgb(21, 18, 35);
+      border-radius: 50%;
+      border-top: 6px solid #863aff;
+      animation: spin 0.5s linear infinite;
+    }
+  }
+  .MM2Modal {
+    width: 501px;
+    height: 554px;
+    background: #1f1834;
+    border-radius: 15px;
+    animation: forwards 0.3s modalPopup;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    .Nav {
+      background: #151027;
+      border: 5px solid #20183680;
+      border-bottom: none;
+      border-radius: 15px 15px 0px 0px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0px 13px;
+      .Title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        img {
+          height: 34px;
+          width: 34px;
+        }
+        p {
+          font-size: 16px;
+          font-weight: 600;
+          background: linear-gradient(#c257ff, #863aff);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      .Navigate {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        cursor: pointer;
+        p {
+          font-size: 10px;
+          color: white;
+          font-weight: 500;
+        }
+        img {
+          width: 6px;
+          height: auto;
+        }
+      }
+    }
+    .Content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      padding: 12px 24px;
+      box-sizing: border-box;
+      overflow: hidden;
+      .BotsContainer {
+        padding: 15px 10px;
+        flex: auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #151223;
+        border-radius: 5px 5px 15px 15px;
+        overflow: hidden;
+        .Bots {
+          background: #151223;
+          height: 100%;
+          width: 100%;
+          display: flex;
+          padding: 0px 5px;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          overflow-y: auto;
+          gap: 15px;
+          .Bot {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(180deg, #19182c 0%, #2e214f 100%)
+                padding-box,
+              linear-gradient(to bottom, #323058, #5b419d) border-box;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            padding: 20px 15px;
+            .Info {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 10px;
+              img {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                border: 1px solid #863aff;
+              }
+              .Name {
+                color: white;
+                font-size: 15px;
+                font-weight: 500;
+              }
+              > .Online {
+                background: #3aff4e;
+                border-radius: 50%;
+                width: 7px;
+                height: 7px;
+                border: 3px solid #329a4a;
+                position: relative;
+                z-index: 2;
+                > .Online {
+                  background: #3aff4e;
+                  border-radius: 50%;
+                  width: 7px;
+                  height: 7px;
+                  position: absolute;
+                  z-index: 1;
+                  filter: blur(6px);
+                }
+              }
+              > .Offline {
+                background: #FF3A3A;
+                border-radius: 50%;
+                width: 7px;
+                height: 7px;
+                border: 3px solid #742536;
+                position: relative;
+                z-index: 2;
+                > .Offline {
+                  background: #FF3A3A;
+                  border-radius: 50%;
+                  width: 7px;
+                  height: 7px;
+                  position: absolute;
+                  z-index: 1;
+                  filter: blur(6px);
+                }
+              }
+            }
+            a {
+              text-decoration: none;
+              background: linear-gradient(180deg, #f971ff 0%, #8b3cff 100%)
+                  padding-box,
+                linear-gradient(to bottom, #ffc1ff, #a148ff) border-box;
+              border: 2px solid transparent;
+              border-radius: 7px;
+              display: flex;
+              width: 112px;
+              height: 37px;
+              align-items: center;
+              justify-content: center;
+              outline: none;
+              p {
+                color: white;
+                font-size: 10px;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+        .Bots::-webkit-scrollbar {
+          width: 3px;
+          background: #19172C;
+        }
+        .Bots::-webkit-scrollbar-thumb {
+
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .Bot > .Info > .Pfp {
+    display: none !important;
+  }
+}

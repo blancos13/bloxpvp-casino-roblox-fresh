@@ -1,0 +1,258 @@
+.ShoppingCart.Empty {
+    width: 310px;
+    height: 216px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 20px 15px;
+    border: 1.5px solid transparent;
+    background: linear-gradient(#19172c, #281c4b) padding-box,
+    linear-gradient(to bottom, #353159, #281c4b) border-box;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    .Heading {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        position: absolute;
+        top: 20px;
+        left: 15px;
+        img {
+            width: 20px;
+            height: auto;
+        }
+        h3 {
+            background: #863AFF;
+            background-blend-mode: overlay;
+            background: linear-gradient(#c257ff, #863aff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+    .Content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        img {
+            width: 69px;
+            height: auto;
+        }
+        .Text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h4 {
+                color: white;
+                font-weight: 600;
+                font-size: 9px;
+            }
+            p {
+                color: white;
+                opacity: 50%;
+                font-size: 9px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+.ShoppingCart.Filled {
+    width: 310px;
+    height: 338px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 50px 0px 15px 0px;
+    border: 1.5px solid transparent;
+    background: linear-gradient(#19172c, #281c4b) padding-box,
+    linear-gradient(to bottom, #353159, #281c4b) border-box;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    overflow: hidden;
+    .Heading {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        img {
+            width: 20px;
+            height: auto;
+        }
+        h3 {
+            background: #863AFF;
+            background-blend-mode: overlay;
+            background: linear-gradient(#c257ff, #863aff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+    .Content {
+        display: flex;
+        flex-direction: column;
+        .ItemsContainer {
+            background: #151223;
+            border-radius: 5px;
+            overflow: hidden;
+            box-sizing: border-box;
+            .Items {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                overflow-y: auto;
+                overflow-x: hidden;
+                gap: 8px;
+                background: #151223;
+                width: 297px;
+                height: 200px;
+                padding: 10px 0px;
+                border-radius: 5px;
+                box-sizing: border-box;
+                .CartItem {
+                    width: 273px;
+                    height: 52px;
+                    background: linear-gradient(180deg, #342A5D 0%, #45387D 100%) padding-box,
+                    linear-gradient(#6854ba, #8a6ff9) border-box;
+                    border: 1px solid transparent;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    box-sizing: border-box;
+                    padding: 7.5px;
+                    .Info {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 7.5px;
+                        .ImageContainer {
+                            position: relative;
+                            width: 30px;
+                            height: 30px;
+                            display: flex;
+                            align-items: center;
+                            border: 2px solid #A095DE;
+                            border-radius: 10px;
+                            .foregroundImage {
+                                width: 30px;
+                                height: 30px;
+                                border-radius: 10px;
+                                z-index: 2;
+                                pointer-events: none;
+                            }
+                            .backgroundImage {
+                                position: absolute;
+                                width: 30px;
+                                height: 30px;
+                                top: 0px;
+                                left: 0;
+                                z-index: 1;
+                                filter: blur(5px)
+                            }
+                        }
+                        .Text {
+                            display: flex;
+                            flex-direction: column;
+                            .Name {
+                                color: white;
+                                font-size: 11px;
+                                font-weight: 500;
+                                opacity: 60%;
+                            }
+                            .Price {
+                                font-weight: 600;
+                                font-size: 11px;
+                                color: white;
+                            }
+                        }
+                    }
+                    > img {
+                        cursor: pointer;
+                        user-select: none;
+                    }
+                }
+            }
+        }
+        .Items::-webkit-scrollbar {
+            border-radius: 13px;
+            background: #2C264E;
+            width: 2px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .items::-webkit-scrollbar-thumb {
+            box-shadow: 0px 0px 5.800000190734863px 0px #863AFF57;
+            box-shadow: 0px 0px 8.699999809265137px 0px #863AFF80;
+        }
+        .Purchase {
+            width: 100%;
+            height: 85px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            gap: 5px;
+            .Amount {
+                display: flex;
+                width: 95%;
+                align-items: center;
+                justify-content: flex-end;
+                .Text {
+                    color: white;
+                    font-size: 11px;
+                    opacity: 50%;
+                    font-weight: 500;
+                    flex: 1;
+                }
+                .Amount {
+                    font-size: 10px;
+                    color: white;
+                    font-weight: 600;
+                    flex: 1;
+                }
+            }
+            .Buy {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                width: 95%;
+                height: 35px;
+                border-radius: 5px;
+                box-shadow: 0px 0px 24.700000762939453px 0px #863AFF33;
+                background: linear-gradient(#a442ff, #873AFF) padding-box,
+                linear-gradient(to bottom, #fd8eff, #873AFF) border-box;
+                border: 1px solid transparent;
+                transition: 0.3s;
+                p {
+                    font-size: 12px;
+                    font-weight: 500;
+                    color: white;
+                }
+            }
+            .Buy:hover {
+                transform: scale(0.98);
+                opacity: 70%;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,323 @@
+.ModalBackground {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  .loadingContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 101;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .loading {
+      width: 50px;
+      height: 50px;
+      border: 6px solid rgb(21, 18, 35);
+      border-radius: 50%;
+      border-top: 6px solid #863aff;
+      animation: spin 0.5s linear infinite;
+    }
+  }
+  .JoiningModal {
+    width: 940px;
+    height: auto;
+    background: #201836;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    .Navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 12px;
+      background: #141025;
+      border-radius: 15px 15px 0px 0px;
+      .Options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        .Search {
+          border: 1px solid #863aff;
+          text-align: center;
+          color: white;
+          box-shadow: 0px 10px 7.800000190734863px 0px #00000026;
+          background: linear-gradient(180deg, #100d20 0%, #201936 100%);
+          height: 38px;
+          width: 190px;
+          outline: none;
+          border-radius: 8px;
+          font-size: 12px;
+          font-weight: 400;
+        }
+        .SelectWrapper {
+          select {
+            background: linear-gradient(180deg, #100d20 0%, #2e2416 100%);
+            border: 1px solid #ffb03a;
+            color: white;
+            height: 38px;
+            width: 160px;
+            font-weight: 400;
+            font-size: 12px;
+            text-align: center;
+            box-shadow: 0px 10px 7.800000190734863px 0px #00000026;
+            border-radius: 8px;
+            -webkit-appearance: none;
+            outline: none;
+          }
+        }
+        .SelectWrapper::after {
+          position: relative;
+          right: 20px;
+          content: url("../../assets/images/arrow.svg");
+        }
+      }
+      .Creation {
+        form {
+          display: flex;
+          justify-content: center;
+          gap: 15px;
+          .Coins {
+            display: flex;
+            justify-content: center;
+            input {
+              appearance: none;
+              height: 40px;
+              width: 40px;
+              transition: 0.2s;
+            }
+            input:hover {
+              cursor: pointer;
+            }
+            input:not(.Selected) {
+              opacity: 70%;
+            }
+            .Selected.Heads {
+              animation: coinAnimationHeads forwards 0.3s;
+            }
+            .Selected.Tails {
+              animation: coinAnimationTails forwards 0.3s;
+            }
+            .Heads {
+              background-image: url("../../../assets/images/heads.svg");
+              background-size: cover;
+              background-repeat: no-repeat;
+              margin-left: -3px;
+            }
+            .Tails {
+              background-image: url("../../../assets/images/tails.svg");
+              background-size: cover;
+              background-repeat: no-repeat;
+            }
+          }
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 137px;
+            height: 38px;
+            max-height: 100%;
+            max-width: 100%;
+            background-color: #873aff;
+            color: white;
+            border-radius: 8px;
+            background: linear-gradient(#a442ff, #873aff) padding-box,
+              linear-gradient(to bottom, #fd8eff, #873aff) border-box;
+            box-shadow: 0px 5px 6px 0px #00000040;
+            border: 1px solid transparent;
+            box-shadow: 0px 0px 31px 0px #8b75ff2e;
+            font-size: 11px;
+            font-weight: 500;
+            transition: 0.3s;
+          }
+          button:hover:not(.Disabled) {
+            transform: scale(0.95);
+            opacity: 70%;
+            cursor: pointer;
+          }
+          button.Disabled {
+            opacity: 80%;
+            cursor: not-allowed;
+            pointer-events: none;
+          }
+        }
+      }
+    }
+    .SelectionStats {
+      display: flex;
+      height: 60px;
+      padding: 0px 20px;
+      align-items: center;
+      gap: 120px;
+      background: #201836;
+      p {
+        color: white;
+      }
+      .Range {
+        opacity: 70%;
+        span {
+          color: #3aff4e;
+        }
+      }
+      .TotalValue {
+        span {
+          color: #863aff;
+          font-weight: 500;
+        }
+      }
+      .SelectedValue {
+        span {
+          color: #ffb03a;
+          font-weight: 500;
+        }
+      }
+    }
+    .Selection {
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      margin-top: 0px;
+      .Items {
+        background-color: #151223;
+        border-radius: 8px;
+        box-sizing: border-box;
+        height: 450px;
+        padding: 20px;
+        gap: 20px 25px;
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: auto;
+        position: relative;
+        position: relative;
+        justify-content: start;
+        align-content: flex-start;
+        .Item {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 10px;
+          align-items: center;
+          min-height: 135px;
+          width: 117px;
+          border: 1px solid transparent;
+          border-radius: 10px;
+          background: linear-gradient(180deg, #19172c 0%, #1e1a39 100%)
+              padding-box,
+            linear-gradient(to bottom, #322e58, #1e1a39) border-box;
+          user-select: none;
+          img {
+            height: 57px;
+            width: 57px;
+            border-radius: 10px;
+            border: 1.5px solid #a095de;
+            pointer-events: none;
+          }
+          .Info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .Value {
+              color: #863aff;
+            }
+            p {
+              font-weight: 500;
+              font-size: 9px;
+              color: white;
+              text-align: center;
+              overflow-wrap: break-word;
+            }
+          }
+          user-select: none;
+        }
+        .Item.Active {
+          position: relative;
+          border-width: 2px;
+          background: linear-gradient(180deg, #19172c 0%, #2a1749 100%)
+              padding-box,
+            linear-gradient(to bottom, #19172c, #9a4cfe) border-box;
+        }
+        .Item.Active::after {
+          position: absolute;
+          content: "";
+          width: 9px;
+          height: 9px;
+          background-color: #863aff;
+          border-radius: 2px;
+          top: 5px;
+          right: 5px;
+        }
+        .Item:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@keyframes modalPopup {
+  0% {
+    transform: translateY(30px) scale(0.9);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 100%;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes coinAnimationTails {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 7px #ff7575);
+  }
+}
+
+@keyframes coinAnimationHeads {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 7px #ffc875);
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .SelectWrapper {
+    display: none !important;
+  }
+  .Selection > .Items {
+    justify-content: center !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Search {
+    display: none !important;
+  }
+  .SelectionStats {
+    gap: 10px !important;
+  }
+}

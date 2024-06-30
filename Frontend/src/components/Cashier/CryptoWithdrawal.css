@@ -1,0 +1,380 @@
+/* cryptoWithdrawlModal.css */
+.ModalBackground {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  .CryptoWithdrawalModal {
+    max-width: 501px;
+    width: 100%;
+    background: #1f1733;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    box-sizing: border-box;
+    margin: 10px;
+    > .Header {
+      background: #151027;
+      border: 5px solid #20183680;
+      border-bottom: none;
+      border-radius: 15px 15px 0px 0px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0px 13px;
+      background-image: url("../../assets/images/homeBackground.svg");
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: soft-light;
+      box-sizing: border-box;
+      .Navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        .Nav {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          img {
+            height: 34px;
+            width: 34px;
+          }
+          .NavLinks {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            .NavLink {
+              font-size: 14px;
+              cursor: pointer;
+            }
+            .NavLink.Active {
+              background: linear-gradient(#c257ff, #863aff);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              font-weight: 700;
+              position: relative;
+            }
+            .NavLink.Active::after {
+              content: "";
+              width: 100%;
+              height: 1px;
+              background: #a74aff;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+            }
+            .NavLink.Inactive {
+              font-weight: 400;
+              color: #fff;
+              opacity: 50%;
+            }
+          }
+        }
+        .Navigate {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 7px;
+          cursor: pointer;
+          p {
+            font-size: 10px;
+            color: white;
+            font-weight: 500;
+          }
+          img {
+            width: 6px;
+            height: auto;
+          }
+        }
+      }
+    }
+    > .Bottom {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      .Interaction {
+        display: flex;
+        flex-direction: column;
+        background: #151223;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px 5px 15px 15px;
+        padding: 17px 17px;
+        gap: 20px;
+        > .Currency {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 5px;
+          box-sizing: border-box;
+          .Header {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            gap: 5px;
+            p {
+              font-size: 10px;
+              font-weight: 500;
+              color: white;
+            }
+            div {
+              background: linear-gradient(
+                90deg,
+                #ffffff 0%,
+                rgba(255, 255, 255, 0) 100%
+              );
+              width: 100%;
+              height: 2px;
+            }
+          }
+          .CurrencyList {
+            display: flex;
+            height: 46px;
+            width: 100%;
+            border-radius: 10px;
+            align-items: center;
+            box-sizing: border-box;
+            cursor: pointer;
+            padding: 10px;
+            justify-content: space-between;
+            background: linear-gradient(180deg, #19182d 0%, #1e1733 100%)
+                padding-box,
+              linear-gradient(to bottom, #32305a, #3c2d65) border-box;
+            border: 1px solid transparent;
+            position: relative;
+            .ListSelection {
+              display: flex;
+              flex-direction: column;
+              position: absolute;
+              bottom: -175px;
+              left: -2px;
+              width: calc(100% + 4px);
+              height: 165px;
+              padding: 5px 10px;
+              box-sizing: border-box;
+              border-radius: 10px;
+              border: 1px solid transparent;
+              user-select: none;
+              background: linear-gradient(180deg, #151223 0%, #1e1733 100%)
+                  padding-box,
+                linear-gradient(to bottom, #292345, #3b2d65) border-box;
+              .Option {
+                display: flex;
+                align-items: center;
+                flex: 1;
+                gap: 10px;
+                transition: 0.2s;
+                user-select: none;
+                img {
+                  height: 20px;
+                  width: auto;
+                  -webkit-user-drag: none;
+                }
+                p {
+                  color: white;
+                  font-size: 10px;
+                }
+              }
+              .Option:hover {
+                opacity: 0.8;
+              }
+              .Option.Active {
+                p {
+                  background: linear-gradient(#c257ff, #863aff);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  font-weight: 600;
+                }
+              }
+            }
+            .Currency {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              user-select: none;
+              img {
+                height: 23px;
+                width: 23px;
+                user-select: none;
+              }
+              p {
+                color: white;
+                font-size: 11px;
+                font-weight: 500;
+              }
+            }
+            > img {
+              height: 7px;
+              width: auto;
+              user-select: none;
+            }
+          }
+        }
+        > .Address {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 5px;
+          box-sizing: border-box;
+          .Header {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            gap: 5px;
+            p {
+              font-size: 10px;
+              font-weight: 500;
+              color: white;
+              text-wrap: nowrap;
+              user-select: none;
+            }
+            div {
+              background: linear-gradient(
+                90deg,
+                #ffffff 0%,
+                rgba(255, 255, 255, 0) 100%
+              );
+              width: 100%;
+              height: 2px;
+            }
+          }
+          .AddressBox {
+            display: flex;
+            height: 46px;
+            width: 100%;
+            border-radius: 10px;
+            align-items: center;
+            box-sizing: border-box;
+            overflow: hidden;
+            justify-content: space-between;
+            background: linear-gradient(180deg, #19182d 0%, #1e1733 100%)
+                padding-box,
+              linear-gradient(to bottom, #32305a, #3c2d65) border-box;
+            border: 1px solid transparent;
+            padding: 10px;
+            gap: 15px;
+            .Input {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              input {
+                width: 100%;
+                outline: none;
+                border: none;
+                background: none;
+                color: white;
+                font-size: 11px;
+                font-weight: 500;
+                font-style: italic;
+              }
+            }
+          }
+        }
+        > .Amount {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 5px;
+          box-sizing: border-box;
+          .Header {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            gap: 5px;
+            p {
+              font-size: 10px;
+              font-weight: 500;
+              color: white;
+              text-wrap: nowrap;
+              user-select: none;
+            }
+            div {
+              background: linear-gradient(
+                90deg,
+                #ffffff 0%,
+                rgba(255, 255, 255, 0) 100%
+              );
+              width: 100%;
+              height: 2px;
+            }
+          }
+          .AmountBox {
+            display: flex;
+            height: 46px;
+            width: 100%;
+            border-radius: 10px;
+            align-items: center;
+            box-sizing: border-box;
+            overflow: hidden;
+            justify-content: space-between;
+            background: linear-gradient(180deg, #19182d 0%, #1e1733 100%)
+                padding-box,
+              linear-gradient(to bottom, #32305a, #3c2d65) border-box;
+            border: 1px solid transparent;
+            padding: 10px;
+            gap: 15px;
+            .Input {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              input::-webkit-outer-spin-button,
+              input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+              }
+              input[type="number"] {
+                -moz-appearance: textfield;
+              }
+              input {
+                width: 100%;
+                outline: none;
+                border: none;
+                background: none;
+                color: white;
+                font-size: 11px;
+                font-weight: 500;
+                font-style: italic;
+              }
+              img {
+                height: 45px;
+                margin-right: -15px;
+              }
+            }
+          }
+        }
+        > .WithdrawButton {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          align-self: center;
+          width: 100%;
+          padding: 10px 0px;
+          background-color: #873aff;
+          color: white;
+          border-radius: 8px;
+          background: linear-gradient(#a442ff, #873aff) padding-box,
+            linear-gradient(to bottom, #fd8eff, #873aff) border-box;
+          border: 1px solid transparent;
+          box-shadow: 0px 0px 31px 0px #8b75ff2e;
+          transition: 0.3s;
+          cursor: pointer;
+          p {
+            font-size: 13px;
+            color: white;
+            font-weight: 500;
+            user-select: none;
+          }
+        }
+      }
+    }
+  }
+}

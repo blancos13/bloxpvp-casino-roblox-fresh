@@ -1,0 +1,181 @@
+.MobileSidebarBackground {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 90px;
+  left: 0;
+  z-index: 98;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  .MobileSidebar {
+    background-color: #19172c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    height: calc(100% - (3rem + 90px));
+    border-right: #322e58 1px solid;
+    .Games {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .Game {
+        border: none;
+        height: 60px;
+        width: 94px;
+        display: grid;
+        padding: 0;
+        position: relative;
+        list-style: none;
+        text-decoration: none;
+        > * {
+          grid-column-start: 1;
+          grid-row-start: 1;
+        }
+        .TopLayer {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          height: 60px;
+          width: 94px;
+          p {
+            color: #9f9da7;
+            font-size: 0.75rem;
+          }
+        }
+        .ShadowLayer {
+          height: 60px;
+          display: none;
+        }
+      }
+      .Active {
+        width: 94px;
+        .TopLayer {
+          p {
+            color: #7c00ff;
+          }
+          background-color: #19172c;
+        }
+        .ShadowLayer {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          filter: blur(18px);
+          width: 94px;
+        }
+        .TopLayer::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0px;
+          background-color: #7c00ff;
+          height: 100%;
+          width: 5px;
+          border-radius: 0px 25px 25px 0px;
+        }
+      }
+    }
+    .Game:hover {
+      cursor: pointer;
+    }
+    .Inactive {
+      width: 94px;
+      .TopLayer {
+        width: 94px;
+        background-color: #19172c;
+        p {
+          font-weight: 500;
+        }
+      }
+    }
+    .Coinflip.Active {
+      img {
+        width: 24px;
+        height: auto;
+        content: url("../../assets/images/coinflipActive.svg");
+      }
+    }
+    .Coinflip.Inactive {
+      img {
+        width: 24px;
+        height: auto;
+        content: url("../../assets/images/coinflipInactive.svg");
+      }
+    }
+    .Jackpot.Inactive {
+      img {
+        width: 24px;
+        height: auto;
+        content: url("../../assets/images/jackpotInactive.svg");
+      }
+    }
+    .Jackpot.Active {
+      img {
+        width: 24px;
+        height: auto;
+        content: url("../../assets/images/jackpotActive.svg");
+      }
+    }
+    .Marketplace.Active {
+      img {
+        width: 19px;
+        height: auto;
+        content: url("../../assets/images/marketplaceActive.svg");
+      }
+    }
+    .Marketplace.Inactive {
+      img {
+        width: 19px;
+        height: auto;
+        content: url("../../assets/images/marketplaceInactive.svg");
+      }
+    }
+    .SocialLinks {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-bottom: 30px;
+      a {
+        text-decoration: none;
+      }
+      .Link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        img {
+          width: 19px;
+          height: 19px;
+        }
+        p {
+          font-weight: 500;
+          font-size: 0.75rem;
+        }
+      }
+      .Discord {
+        p {
+          color: #6349ff;
+        }
+      }
+      .Support {
+        p {
+          color: #59ff56;
+        }
+      }
+    }
+  }
+}

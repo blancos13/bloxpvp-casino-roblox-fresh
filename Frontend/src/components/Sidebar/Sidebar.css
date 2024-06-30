@@ -1,0 +1,157 @@
+.Sidebar {
+    background-color: #19172C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    .Games {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .Game {
+            border: none;
+            height: 90px;
+            width: 126px;
+            display: grid;
+            padding: 0;
+            position: relative;
+            list-style: none;
+            text-decoration: none;
+            > * {
+                grid-column-start: 1;
+                grid-row-start: 1;
+            }
+            .TopLayer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                height: 90px;
+                p {
+                    color: #9F9DA7;
+                    font-size: 0.9rem;
+                }
+            }
+            .ShadowLayer {
+                height: 90px;
+                display: none;
+            }
+        }
+        .Active {
+            .TopLayer {
+                p {
+                    color: #7C00FF;
+                }
+                background-color: #19172C;
+            }
+            .ShadowLayer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                filter: blur(18px);
+            }
+            .TopLayer::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 10%;
+                left: 0px;
+                background-color: #7C00FF;
+                height: 70px;
+                width: 5px;
+                border-radius: 0px 25px 25px 0px;
+            }
+        }
+    }
+    .Game:hover {
+        cursor: pointer;
+    }
+    .Inactive {
+        .TopLayer {
+            background-color: #19172C;
+            p {
+                font-weight: 500;
+            }
+        }
+    }
+    .Coinflip.Active {
+        img {
+            width: 36px;
+            height: auto;
+            content: url('../../assets/images/coinflipActive.svg');
+        }
+    }
+    .Coinflip.Inactive {
+        img {
+            width: 36px;
+            height: auto;
+            content: url('../../assets/images/coinflipInactive.svg');
+        }
+    }
+    .Jackpot.Inactive {
+        img {
+            width: 36px;
+            height: auto;
+            content: url('../../assets/images/jackpotInactive.svg');
+        }
+    }
+    .Jackpot.Active {
+        img {
+            width: 36px;
+            height: auto;
+            content: url('../../assets/images/jackpotActive.svg');
+        }
+    }
+    .Marketplace.Active {
+        img {
+            width: 29px;
+            height: 25px;
+            content: url('../../assets/images/marketplaceActive.svg');
+        }
+    }
+    .Marketplace.Inactive {
+        img {
+            width: 29px;
+            height: 25px;
+            content: url('../../assets/images/marketplaceInactive.svg');
+        }
+    }
+    .SocialLinks {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 30px;
+        a {
+            text-decoration: none;
+        }
+        .Link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            img {
+                width: 25px;
+                height: 25px;
+            }
+            p {
+                font-weight: 500;
+                font-size: 0.9rem;
+            }
+        }
+        .Discord {
+            p {
+                color: #6349FF;
+            }
+        }
+        .Support {
+            p {
+                color: #59FF56;
+            }
+        }
+    }
+}

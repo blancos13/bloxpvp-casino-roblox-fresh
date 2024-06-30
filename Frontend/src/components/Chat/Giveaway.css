@@ -1,0 +1,253 @@
+.GiveawayPopup.Counting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 127px;
+  width: calc(100% - 30px);
+  border-radius: 11px;
+  border: 1px solid transparent;
+  background: linear-gradient(#1a182e, #2c2249) padding-box,
+    linear-gradient(to bottom, #342f5c, #2c2249) border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  position: absolute;
+  bottom: -122.5px;
+  .Item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    .PS99 {
+      position: relative;
+      height: 70px;
+      width: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #ffb13c;
+      border-radius: 10px;
+      pointer-events: none;
+      box-shadow: 0px 0px 22.299999237060547px 0px #ec970233;
+      user-select: none;
+      .foregroundImage {
+        height: 70px;
+        width: 70px;
+        border-radius: 10px;
+        z-index: 2;
+        pointer-events: none;
+      }
+      .backgroundImage {
+        position: absolute;
+        height: 70px;
+        width: 70px;
+        top: 0px;
+        left: 0;
+        z-index: 1;
+        border-radius: 10px;
+      }
+    }
+    .ImageContainer {
+      position: relative;
+      height: 70px;
+      width: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #ffb13c;
+      border-radius: 10px;
+      pointer-events: none;
+      box-shadow: 0px 0px 22.299999237060547px 0px #ec970233;
+      user-select: none;
+      .foregroundImage {
+        height: 70px;
+        width: 70px;
+        border-radius: 10px;
+        z-index: 2;
+        pointer-events: none;
+      }
+      .backgroundImage {
+        position: absolute;
+        height: 70px;
+        width: 70px;
+        top: 0px;
+        left: 0;
+        z-index: 1;
+        filter: blur(10px);
+      }
+    }
+    .Text {
+      display: flex;
+      flex-direction: column;
+      .Gw {
+        font-size: 15px;
+        line-height: 22.5px;
+        color: white;
+        font-weight: 500;
+      }
+      .ItemName {
+        color: #ffa200;
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 500;
+      }
+    }
+  }
+  .Interaction {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    .Join {
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(#a442ff, #873aff) padding-box,
+        linear-gradient(to bottom, #fd8eff, #873aff) border-box;
+      border: 2px solid transparent;
+      border-radius: 7px;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      height: 42px;
+      width: 81px;
+      cursor: pointer;
+      p {
+        color: white;
+        font-weight: 500;
+        font-size: 12px;
+        user-select: none;
+      }
+      .Time {
+        font-size: 8px;
+      }
+    }
+    .Joined {
+      opacity: 70%;
+      pointer-events: none;
+      cursor: not-allowed;
+    }
+    .Other {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #19172c;
+      border: 1px solid transparent;
+      background: linear-gradient(#19172c, #331a61) padding-box,
+        linear-gradient(to bottom, #19172c, #6734c3) border-box;
+      height: 28px;
+      width: 81px;
+      border-radius: 37px;
+      gap: 15px;
+      cursor: pointer;
+      user-select: none;
+      p {
+        color: #863aff;
+        font-weight: 500;
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+.GiveawayPopup.Ended {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 127px;
+  width: calc(100% - 30px);
+  border-radius: 11px;
+  border: 1px solid transparent;
+  background: linear-gradient(#1a182e, #2c2249) padding-box,
+    linear-gradient(to bottom, #342f5c, #2c2249) border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  position: absolute;
+  bottom: -122.5px;
+  > .Winner {
+    border: 2px solid #ff9b35;
+    box-shadow: 0px 0px 40px 0px #ffc9682e;
+    background: linear-gradient(
+        180deg,
+        rgba(21, 16, 39, 0) 0%,
+        rgba(235, 168, 86, 0.5) 100%
+      ),
+      linear-gradient(180deg, #110e1f 0%, #593e16 100%);
+    height: 68px;
+    width: 68px;
+    border-radius: 50%;
+    pointer-events: none;
+    user-select: none;
+  }
+  .Text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 146px;
+    text-wrap: wrap;
+    word-wrap: break-word;
+    .Header {
+      color: white;
+      font-weight: 500;
+      font-size: 15px;
+    }
+    .Winner {
+      color: #ffa200;
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+  .PS99 {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ffb13c;
+    border-radius: 10px;
+    pointer-events: none;
+    box-shadow: 0px 0px 22.299999237060547px 0px #ec970233;
+    user-select: none;
+    .foregroundImage {
+      height: 50px;
+      width: 50px;
+      border-radius: 10px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .backgroundImage {
+      position: absolute;
+      height: 50px;
+      width: 50px;
+      top: 0px;
+      left: 0;
+      z-index: 1;
+      border-radius: 10px;
+    }
+  }
+  .ImageContainer {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #ffb13c;
+    border-radius: 10px;
+    pointer-events: none;
+    box-shadow: 0px 0px 22.299999237060547px 0px #ec970233;
+    user-select: none;
+    .foregroundImage {
+      height: 50px;
+      width: 50px;
+      border-radius: 10px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .backgroundImage {
+      position: absolute;
+      height: 50px;
+      width: 50px;
+      top: 0px;
+      left: 0;
+      z-index: 1;
+      filter: blur(10px);
+    }
+  }
+}

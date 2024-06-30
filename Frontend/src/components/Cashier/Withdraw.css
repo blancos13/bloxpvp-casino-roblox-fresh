@@ -1,0 +1,341 @@
+.ModalBackground {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  .loadingContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 101;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .loading {
+      width: 50px;
+      height: 50px;
+      border: 6px solid rgb(21, 18, 35);
+      border-radius: 50%;
+      border-top: 6px solid #863aff;
+      animation: spin 0.5s linear infinite;
+    }
+  }
+  .WithdrawModal {
+    width: 940px;
+    height: 600px;
+    background: #201836;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    .Navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 12px;
+      background: #141025;
+      border-radius: 15px 15px 0px 0px;
+      .Options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        .Search {
+          border: 1px solid #863aff;
+          text-align: center;
+          color: white;
+          box-shadow: 0px 10px 7.800000190734863px 0px #00000026;
+          background: linear-gradient(180deg, #100d20 0%, #201936 100%);
+          height: 38px;
+          width: 190px;
+          outline: none;
+          border-radius: 8px;
+          font-size: 12px;
+          font-weight: 400;
+        }
+      }
+      .Interaction {
+        display: flex;
+        gap: 10px;
+        .Withdraw {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 137px;
+          height: 38px;
+          max-height: 100%;
+          max-width: 100%;
+          background-color: #873aff;
+          color: white;
+          border-radius: 8px;
+          background: linear-gradient(#a442ff, #873aff) padding-box,
+            linear-gradient(to bottom, #fd8eff, #873aff) border-box;
+          border: 1px solid transparent;
+          box-shadow: 0px 0px 31px 0px #8b75ff2e;
+          transition: 0.3s;
+          p {
+            font-size: 10px;
+            color: white;
+            font-weight: 500;
+          }
+        }
+        .Giveaway {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 137px;
+          height: 38px;
+          max-height: 100%;
+          max-width: 100%;
+          color: white;
+          border-radius: 8px;
+          background: linear-gradient(180deg, #ffbe5d 0%, #dd7a02 100%)
+              padding-box,
+            linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0)) border-box;
+          border: 1px solid transparent;
+          box-shadow: 0px 0px 31px 0px #ffe9752e;
+          transition: 0.3s;
+          outline: none;
+          p {
+            font-size: 10px;
+            color: white;
+            font-weight: 500;
+          }
+        }
+        button:hover:not(.Disabled) {
+          transform: scale(0.95);
+          opacity: 70%;
+          cursor: pointer;
+        }
+        button.Disabled {
+          opacity: 80%;
+          cursor: not-allowed;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+  .Selection {
+    border-radius: 20px;
+    flex: auto;
+    background-color: #151223;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    margin: 20px 20px 40px 20px;
+    .SelectionStatistics {
+      display: flex;
+      justify-content: start;
+      gap: 20px;
+      padding: 15px 20px;
+      align-items: center;
+      .TotalValue {
+        display: flex;
+        flex-direction: row;
+        height: 35px;
+        align-items: center;
+        gap: 6px;
+        > img {
+          width: 35px;
+          height: 35px;
+        }
+        .Text {
+          display: flex;
+          flex-direction: column;
+          .Worth {
+            color: #bfbfcd;
+            font-size: 10px;
+            font-weight: 500;
+            height: 10px;
+          }
+          .Value {
+            color: white;
+          }
+        }
+      }
+      .TotalItems {
+        display: flex;
+        flex-direction: row;
+        height: 35px;
+        align-items: center;
+        gap: 6px;
+        > img {
+          width: 35px;
+          height: 35px;
+        }
+        .Text {
+          display: flex;
+          flex-direction: column;
+          .TheItems {
+            color: #bfbfcd;
+            font-size: 10px;
+            font-weight: 500;
+            height: 10px;
+          }
+          .Value {
+            color: white;
+          }
+        }
+      }
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 26px;
+        width: 26px;
+        background: linear-gradient(#a442ff, #873aff) padding-box,
+          linear-gradient(to bottom, #fd8eff, #873aff) border-box;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        transition: 0.3s;
+      }
+      button:hover {
+        cursor: pointer;
+        opacity: 70%;
+        transform: scale(1.05);
+      }
+    }
+    .ItemsDisplay {
+      background-color: #151223;
+      box-shadow: 0px -15px 39.599998474121094px -1px #0000001a;
+      border-radius: 8px;
+      box-sizing: border-box;
+      height: 428px;
+      padding: 0px 0px 20px 30px;
+      gap: 20px 25px;
+      display: flex;
+      flex-wrap: wrap;
+      overflow-y: auto;
+      position: relative;
+      justify-content: start;
+      align-content: flex-start;
+      .Item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        min-height: 135px;
+        min-width: 117px;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        background: linear-gradient(180deg, #19172c 0%, #1e1a39 100%)
+            padding-box,
+          linear-gradient(to bottom, #322e58, #1e1a39) border-box;
+        img {
+          height: 57px;
+          width: 57px;
+          border-radius: 10px;
+          border: 1.5px solid #a095de;
+          pointer-events: none;
+        }
+        .Info {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .Value {
+            color: #863aff;
+          }
+          p {
+            font-weight: 500;
+            font-size: 9px;
+            color: white;
+          }
+        }
+        user-select: none;
+      }
+      .Item.Active {
+        position: relative;
+        background: linear-gradient(180deg, #19172c 0%, #2a1749 100%)
+            padding-box,
+          linear-gradient(to bottom, #19172c, #9a4cfe) border-box;
+      }
+      .Item.Active::after {
+        position: absolute;
+        content: "";
+        width: 9px;
+        height: 9px;
+        background-color: #863aff;
+        border-radius: 2px;
+        top: 5px;
+        right: 5px;
+      }
+      .Item:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@keyframes modalPopup {
+  0% {
+    transform: translateY(30px) scale(0.9);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 100%;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes coinAnimationTails {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 7px #ff7575);
+  }
+}
+
+@keyframes coinAnimationHeads {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 7px #ffc875);
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .SelectWrapper {
+    display: none !important;
+  }
+  .Selection > .Items {
+    justify-content: center !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Search {
+    display: none !important;
+  }
+  .SelectionStats {
+    gap: 10px !important;
+  }
+  .WithdrawModal > .Navbar {
+    justify-content: center !important;
+    .Interaction {
+      width: 100% !important;
+      gap: 20px !important;
+      justify-content: center !important;
+    }
+  }
+}

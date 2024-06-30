@@ -1,0 +1,246 @@
+.Overview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid transparent;
+  padding: 7.5px 30px;
+  background: linear-gradient(180deg, #19182c 0%, #2f214f 100%) padding-box,
+    linear-gradient(to bottom, #323058, #2f214f) border-box;
+  img {
+    width: 30px;
+    height: 30px;
+  }
+  border-radius: 15px;
+  .Players {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    .Player {
+      position: relative;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: 0.15s;
+      .WinnerStroke {
+        border: 1px solid #23ff10 !important;
+      }
+      .Avatar {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background: linear-gradient(
+              180deg,
+              rgba(0, 0, 0, 0.45) 0%,
+              rgba(20, 21, 50, 0.45) 100%
+            )
+            padding-box,
+          linear-gradient(to bottom, #1d1b33, #3a3275) border-box;
+        border: 1px solid transparent;
+      }
+      .Coin {
+        position: absolute;
+        z-index: 2;
+        right: -10px;
+        top: -10px;
+      }
+      .Anonymous {
+        background: linear-gradient(
+              180deg,
+              rgba(0, 0, 0, 0.45) 0%,
+              rgba(20, 21, 50, 0.45) 100%
+            )
+            padding-box,
+          linear-gradient(to bottom, #1d1b33, #3a3275) border-box;
+        border: 1px solid transparent;
+      }
+    }
+    .Player:hover {
+      opacity: 70%;
+    }
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      color: white;
+    }
+  }
+  .WinningCoin.Heads {
+    background-image: url("../../../assets/images/heads.svg");
+  }
+  .WinningCoin {
+    width: 67px;
+    height: 67px;
+    background-position: center;
+    background-size: 130%;
+    background-repeat: no-repeat;
+  }
+  .WinningCoin.Tails {
+    background-image: url("../../../assets/images/tails.svg");
+  }
+  .Items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0px 9px 11.300000190734863px 0px #00000033 inset;
+    border: 1px solid #272547;
+    background: #151223 padding-box;
+    padding: 10px 20px;
+    border-radius: 128px;
+    > .PS99 {
+      position: relative;
+      width: max-content;
+      display: flex;
+      align-items: center;
+      .foregroundImage {
+        width: 45px;
+        height: 45px;
+        border: 0.1rem solid #a095de;
+        border-radius: 10px;
+        z-index: 2;
+        pointer-events: none;
+      }
+      .backgroundImage {
+        position: absolute;
+        border-radius: 10px;
+        width: 45px;
+        height: 45px;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        filter: blur(15px);
+        opacity: 30%;
+      }
+    }
+    > .imageContainer {
+      position: relative;
+      width: max-content;
+      display: flex;
+      align-items: center;
+      .foregroundImage {
+        width: 45px;
+        height: 45px;
+        border: 0.1rem solid #a095de;
+        border-radius: 10px;
+        z-index: 2;
+        pointer-events: none;
+      }
+      .backgroundImage {
+        position: absolute;
+        width: 51px;
+        height: 51px;
+        top: 0px;
+        left: 0;
+        z-index: 1;
+        filter: blur(10px);
+      }
+    }
+    .Extra {
+      border: 1px transparent solid;
+      min-width: 51px;
+      min-height: 51px;
+      border-radius: 50%;
+      display: flex;
+      cursor: pointer;
+      justify-content: center;
+      align-items: center;
+      transition: 0.15s;
+      background: linear-gradient(180deg, #0a0911 0%, #211e39 100%) padding-box,
+        linear-gradient(to bottom, #1d1b33, #3a3275) border-box;
+      p {
+        font-weight: 500;
+        font-size: 14px;
+        color: #a095de;
+      }
+    }
+    .Extra:hover {
+      opacity: 70%;
+    }
+  }
+  div.Value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    p.Value {
+      color: #863aff;
+      text-shadow: 0px 0px 20px #863aff;
+      font-weight: 600;
+      font-size: 15px;
+    }
+    p.ValueRange {
+      color: white;
+      font-weight: 400;
+      font-size: 11px;
+    }
+  }
+  .Interact {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 150px;
+    button {
+      width: 130px;
+      height: 41px;
+      border-radius: 5px;
+      color: white;
+      font-weight: 500;
+      font-size: 13px;
+      background-color: #873aff;
+      background: linear-gradient(#a442ff, #873aff) padding-box,
+        linear-gradient(to bottom, #fd8eff, #873aff) border-box;
+      box-shadow: 0px 4px 6px 0px #00000033;
+      border: 1px solid transparent;
+      transition: 0.3s;
+    }
+    button:hover {
+      cursor: pointer;
+      opacity: 70%;
+      transform: scale(0.95);
+    }
+    .Eye {
+      background: linear-gradient(180deg, #2d2a40 0%, #322c54 100%) padding-box,
+        linear-gradient(to bottom, #6c639b, #3c3666) border-box;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid transparent;
+      img {
+        width: 18px;
+        height: auto;
+      }
+      transition: 0.2s;
+    }
+    .Eye:hover {
+      cursor: pointer;
+      opacity: 80%;
+    }
+  }
+}
+
+@media (max-width: 1640px) {
+  .Overview {
+    flex-direction: column !important;
+    height: auto !important;
+    padding: 20px !important;
+    gap: 10px !important;
+    .Players {
+      margin-bottom: -70px !important;
+      gap: 40px !important;
+    }
+    .PlayerOne,
+    .PlayerTwo {
+      width: 55px !important;
+      height: 55px !important;
+    }
+  }
+  .Interact {
+    justify-content: center !important;
+  }
+}
+
+@media screen and (max-width: ) {
+}

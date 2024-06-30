@@ -1,0 +1,734 @@
+.ModalBackground {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  .loadingContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 101;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .loading {
+      width: 50px;
+      height: 50px;
+      border: 6px solid rgb(21, 18, 35);
+      border-radius: 50%;
+      border-top: 6px solid #863aff;
+      animation: spin 0.5s linear infinite;
+    }
+  }
+  .ModalBackground {
+    .FairnessModal {
+      position: fixed;
+      max-width: 600px;
+      width: 100%;
+      background: #131020;
+      border-radius: 10px;
+      padding: 20px 40px;
+      box-sizing: border-box;
+      > h2 {
+        color: white;
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      .Info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        .DataContainer {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          gap: 3px;
+          h3 {
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+          }
+          .Text {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(180deg, #19182d 0%, #1e1733 100%)
+                padding-box,
+              linear-gradient(to bottom, #32305a, #3c2d65) border-box;
+            border: 1px solid transparent;
+            height: 46px;
+            width: 100%;
+            margin-left: -2px;
+            border-radius: 10px;
+            gap: 3px;
+            padding: 10px;
+            box-sizing: border-box;
+            p {
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              color: #fff;
+              font-style: italic;
+              font-size: 13px;
+              font-weight: 500;
+            }
+            img {
+              height: 17px;
+              width: 17px;
+              cursor: pointer;
+              transition: 0.2s;
+            }
+            img:hover {
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+      p {
+        color: #717171;
+        font-size: 13px;
+        font-weight: 500;
+        margin-top: 4px;
+        a {
+          color: #9742ff;
+          text-decoration: none;
+          transition: 0.2s;
+        }
+        a:hover {
+          opacity: 0.8;
+        }
+      }
+      .Navigate {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        p {
+          font-size: 10px;
+          color: white;
+          font-weight: 500;
+        }
+        img {
+          width: 6px;
+          height: auto;
+        }
+      }
+    }
+  }
+  .ViewingModal {
+    width: 960px;
+    height: 600px;
+    overflow: hidden;
+    background: #151027;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    box-shadow: 0px 31px 71.5px 0px #0000004d;
+    border: 3px #1c1530 solid;
+    border-bottom: none;
+    > img {
+      align-self: center;
+      width: 45px;
+      height: 45px;
+      mix-blend-mode: overlay;
+    }
+    .Players {
+      display: flex;
+      justify-self: center;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 50px;
+      position: relative;
+      height: 350px;
+      video {
+        mix-blend-mode: screen;
+        z-index: 10;
+        width: 700px;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .VS {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(0, 0, 0);
+        font-size: 80px;
+        font-weight: 600;
+        font-style: italic;
+        opacity: 20%;
+        text-align: center;
+        height: 200px;
+        width: 200px;
+      }
+      .Coin {
+        opacity: 0;
+        height: 235px;
+        width: 235px;
+        position: relative;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        .heads {
+          background-image: url("../../../assets/images/heads.svg");
+        }
+        .tails {
+          background-image: url("../../../assets/images/tails.svg");
+          transform: rotateX(180deg);
+        }
+        div {
+          width: 100%;
+          height: 100%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: absolute;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+      }
+      .PlayerOne {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 0px 20px 0px 0px;
+        width: 250px;
+        height: 100px;
+        background: linear-gradient(90deg, #151027 0%, #201836 100%) padding-box,
+          linear-gradient(to right, rgba(64, 48, 105, 0), #403069) border-box;
+        border-radius: 1000px;
+        border: 1px solid transparent;
+        .Pfp {
+          display: flex;
+          flex-direction: column;
+          border-radius: 50%;
+          width: 100px;
+          height: 100px;
+          transition: 0.1s;
+          img {
+            border-radius: 50%;
+            transition: 0.15s;
+            border: 1px solid transparent;
+          }
+          p {
+            text-align: center;
+            margin-top: 10px;
+            font-weight: 500;
+            font-size: 13px;
+            transition: 0.15s;
+          }
+        }
+        .Info {
+          margin-left: -15px;
+          .Username {
+            color: #fff;
+            font-weight: 500;
+            width: 100px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          .Level {
+            color: #863aff;
+            font-weight: 500;
+            font-size: 13px;
+          }
+        }
+        .Percent {
+          color: #863aff;
+          font-weight: 500;
+          font-size: 11px;
+        }
+      }
+      .PlayerTwo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        padding: 0px 0px 0px 20px;
+        width: 250px;
+        height: 100px;
+        background: linear-gradient(90deg, #201836 0%, #151027 100%) padding-box,
+          linear-gradient(to right, #403069, rgba(64, 48, 105, 0)) border-box;
+        border-radius: 1000px;
+        border: 1px solid transparent;
+        .Pfp {
+          display: flex;
+          flex-direction: column;
+          border-radius: 50%;
+          width: 100px;
+          height: 100px;
+          transition: 0.1s;
+          img {
+            border-radius: 50%;
+            transition: 0.15s;
+            border: 1px solid transparent;
+          }
+          p {
+            text-align: center;
+            margin-top: 10px;
+            font-weight: 500;
+            font-size: 13px;
+            transition: 0.15s;
+          }
+        }
+        .Info {
+          margin-right: -15px;
+          .Username {
+            color: #fff;
+            font-weight: 500;
+            width: 100px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            text-align: end;
+          }
+          .Level {
+            color: #863aff;
+            font-weight: 500;
+            font-size: 13px;
+            text-align: end;
+          }
+        }
+        .Percent {
+          color: #863aff;
+          font-weight: 500;
+          font-size: 11px;
+        }
+      }
+      .WinnerState {
+        .Pfp {
+          img {
+            background: linear-gradient(
+              180deg,
+              rgba(21, 16, 39, 0) 0%,
+              rgba(235, 168, 86, 0.5) 100%
+            );
+            border: 2px solid #ff9b35;
+            box-shadow: 0px 0px 40px 0px #ffc9682e;
+          }
+          p {
+            color: #ffbc64;
+          }
+        }
+        .Info {
+          .Level {
+            color: #ffbc64;
+          }
+        }
+      }
+
+      .LoserState {
+        background: linear-gradient(90deg, #151027 0%, #201836 100%) padding-box,
+          linear-gradient(to right, #151027, #403069) border-box;
+        .Pfp {
+          img {
+            background: linear-gradient(
+              180deg,
+              rgba(21, 16, 39, 0) 0%,
+              rgba(208, 46, 50, 0.5) 100%,
+              rgba(255, 56, 61, 0.5) 100%
+            );
+            border: 2px solid #d12e33;
+            box-shadow: 0px 0px 40px 0px #d02e322e;
+          }
+          p {
+            font-weight: 600;
+            color: #d12e33;
+          }
+        }
+        .Info {
+          .Level {
+            color: #d12e33;
+          }
+        }
+      }
+    }
+    .ProvablyFair {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      z-index: 11;
+      .Container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        border-radius: 20px 20px 0px 0px;
+        background: #1f1733;
+        width: 192px;
+        height: 30px;
+        box-sizing: border-box;
+        padding: 0px 8px;
+        cursor: pointer;
+        transition: 0.2s;
+        img {
+          width: 21px;
+          height: 21px;
+        }
+        p {
+          color: white;
+          font-size: 13px;
+          line-height: 22.5px;
+          font-weight: 400;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+      .Container:hover {
+        opacity: 80%;
+      }
+    }
+    .Bottom {
+      background: #201836;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      .Items {
+        display: flex;
+        width: 100%;
+        padding: 20px 0px 0px 0px;
+        height: 90%;
+        gap: 20px;
+        justify-content: center;
+        .Item {
+          > .PS99 {
+            position: relative;
+            width: max-content;
+            display: flex;
+            align-items: center;
+            .foregroundImage {
+              width: 45px;
+              height: 45px;
+              border: 0.1em solid #a095de;
+              border-radius: 10px;
+              z-index: 2;
+              pointer-events: none;
+            }
+            .backgroundImage {
+              position: absolute;
+              border-radius: 10px;
+              width: 45px;
+              height: 45px;
+              top: 0px;
+              left: 0px;
+              z-index: 1;
+              filter: blur(15px);
+              opacity: 30%;
+            }
+          }
+          > .imageContainer {
+            position: relative;
+            width: max-content;
+            display: flex;
+            align-items: center;
+            border: 0.1rem solid #a095de;
+            border-radius: 10px;
+            .foregroundImage {
+              width: 45px;
+              height: 45px;
+              z-index: 2;
+              pointer-events: none;
+            }
+            .backgroundImage {
+              position: absolute;
+              width: 45px;
+              height: 45px;
+              top: 0px;
+              z-index: 1;
+              filter: blur(10px);
+            }
+          }
+        }
+        .FirstItems {
+          background-color: #151223;
+          border-radius: 8px;
+          box-sizing: border-box;
+          padding: 20px;
+          gap: 20px 25px;
+          display: flex;
+          flex-wrap: wrap;
+          overflow-y: auto;
+          position: relative;
+          justify-content: start;
+          align-content: start;
+          width: 47.5%;
+          height: 280px;
+          min-height: 100%;
+          overflow-x: hidden;
+          overflow-y: auto;
+          align-items: center;
+          .Item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+            height: 135px;
+            width: 117px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            background: linear-gradient(180deg, #19172c 0%, #1e1a39 100%)
+                padding-box,
+              linear-gradient(to bottom, #322e58, #1e1a39) border-box;
+            img {
+              height: 57px;
+              width: 57px;
+              border-radius: 10px;
+              border: 1.5px solid #a095de;
+              pointer-events: none;
+            }
+            .Info {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              .Value {
+                color: #863aff;
+              }
+              p {
+                font-weight: 500;
+                font-size: 9px;
+                color: white;
+              }
+            }
+            user-select: none;
+          }
+        }
+        .SecondItems {
+          background-color: #151223;
+          border-radius: 8px;
+          box-sizing: border-box;
+          padding: 20px;
+          gap: 20px 25px;
+          display: flex;
+          flex-wrap: wrap;
+          position: relative;
+          justify-content: start;
+          align-content: flex-start;
+          width: 47.5%;
+          height: 280px;
+          min-height: 100%;
+          overflow-x: hidden;
+          overflow-y: scroll;
+          .Item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+            height: 135px;
+            width: 117px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            background: linear-gradient(180deg, #19172c 0%, #1e1a39 100%)
+                padding-box,
+              linear-gradient(to bottom, #322e58, #1e1a39) border-box;
+            img {
+              height: 57px;
+              width: 57px;
+              border-radius: 10px;
+              border: 1.5px solid #a095de;
+              pointer-events: none;
+            }
+            .Info {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              .Value {
+                color: #863aff;
+              }
+              p {
+                font-weight: 500;
+                font-size: 9px;
+                color: white;
+              }
+            }
+            user-select: none;
+          }
+        }
+      }
+      .Extra {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        p {
+          color: white;
+          display: flex;
+          text-align: center;
+          font-weight: 500;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes modalPopup {
+  0% {
+    transform: translateY(30px) scale(0.9);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 100%;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes coinAnimationTails {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 7px #ff7575);
+  }
+}
+
+@keyframes coinAnimationHeads {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 7px #ffc875);
+  }
+}
+
+@media screen and (max-width: 890px) {
+  video {
+    height: 140% !important;
+    width: auto !important;
+  }
+  .PlayerOne,
+  .PlayerTwo {
+    width: 200px !important;
+    height: 80px !important;
+    .Pfp {
+      width: 80px !important;
+      height: 80px !important;
+    }
+    .Info {
+      p {
+        font-size: 80%;
+      }
+    }
+    .Username {
+      width: 70px !important;
+    }
+  }
+  .PlayerOne {
+    .Username {
+      margin-left: -30px;
+    }
+    .Level {
+      margin-left: -30px;
+    }
+  }
+  .PlayerTwo {
+    .Username {
+      margin-right: -30px;
+    }
+    .Level {
+      margin-right: -30px;
+    }
+  }
+  .VS {
+    width: 100px !important;
+    font-size: 40px !important;
+  }
+  .PlayerOne {
+    .Info {
+      margin-left: 20px !important;
+    }
+  }
+  .PlayerTwo {
+    .Info {
+      margin-right: 20px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .ViewingModal > .Players > .PlayerOne,
+  .ViewingModal > .Players > .PlayerTwo {
+    flex-direction: column !important;
+    height: 150px !important;
+    width: 100px;
+    background: none !important;
+    align-items: center !important;
+    padding: 0 !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    .Pfp > p {
+      margin-top: 30px !important;
+    }
+    .Level {
+      display: none;
+    }
+    .Percent {
+      display: none;
+    }
+    .Username {
+      font-size: 15px;
+      width: 200px !important;
+      margin: 0px !important;
+      text-align: center !important;
+    }
+    .Info {
+      margin: 0px !important;
+    }
+  }
+  .ViewingModal > .Players {
+    padding: 0px 20px !important;
+  }
+  .ViewingModal > .Bottom > .Items > .FirstItems,
+  .ViewingModal > .Bottom > .Items > .SecondItems {
+    justify-content: center !important;
+  }
+  .ProvablyFair {
+    .Container {
+      width: 165px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .ViewingModal > .Players {
+    padding: 0px 0px !important;
+  }
+  .Players {
+    justify-content: center !important;
+  }
+}

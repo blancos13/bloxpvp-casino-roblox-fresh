@@ -1,0 +1,178 @@
+.MobileChatBackground {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 90px;
+  left: 0;
+  z-index: 98;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  .MobileChat {
+    background-color: #0f0c1f;
+    border-left: #322e58 2px solid;
+    border-top: #322e58 2px solid;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: calc(100% - (3rem + 90px));
+    width: 100%;
+    .ChatInfo {
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      position: relative;
+      box-shadow: 0px -10px 50px 65px #0f0c1f;
+      .Rules {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        height: 45px;
+        width: 45px;
+        border-radius: 5px;
+        background: linear-gradient(#1a182e, #2c2249) padding-box,
+          linear-gradient(to bottom, #5f43aa, #19172c) border-box;
+        border: 2px solid transparent;
+        img {
+          opacity: 80%;
+        }
+      }
+      .Rules:hover {
+        cursor: pointer;
+      }
+      .Chatdetails {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 10px;
+        background-color: #ffffff;
+        height: 45px;
+        flex: auto;
+        border-radius: 5px;
+        background: linear-gradient(#1a182e, #2c2249) padding-box,
+          linear-gradient(to bottom, #5f4c94, #19172c) border-box;
+        border: 2px solid transparent;
+        .Chatroom {
+          display: flex;
+          justify-content: space-between;
+          gap: 10px;
+          align-items: center;
+          p {
+            color: #bfbfcd;
+            font-weight: 500;
+            font-size: 0.9rem;
+          }
+          img {
+            height: 21px;
+            width: auto;
+          }
+        }
+        .ChatStats {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          .RedCount {
+            display: inline-block;
+            animation: onlineAnimation infinite 3s ease-in-out;
+            width: 6.5px;
+            height: 6.5px;
+            border-radius: 50%;
+            background-color: #ff3434;
+            position: relative;
+            opacity: 100%;
+            border: 3px rgba(0, 0, 0, 0.4) solid;
+            box-shadow: 0px 0px 16px 3px #ff343466;
+          }
+          .NumberCount {
+            color: white;
+          }
+        }
+      }
+    }
+    .Messages {
+      display: flex;
+      flex-direction: column-reverse;
+      overflow-y: scroll;
+      overflow-x: none;
+      justify-content: end;
+      flex: auto;
+      padding: 20px 10px 0px 10px;
+      gap: 25px;
+      max-height: 100%;
+    }
+    .SendMessage {
+      padding: 10px;
+      margin-bottom: 20px;
+      form {
+        div {
+          height: 46px;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          background: linear-gradient(180deg, #100d20 0%, #201936 100%),
+            linear-gradient(0deg, #863aff, #863aff);
+          border-radius: 10px;
+          border: 1px solid #863aff;
+          input {
+            flex: auto;
+            border-radius: 10px 0px 0px 10px;
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+            outline: none;
+            padding: 0px 10px;
+            color: #bfbfcd;
+          }
+          img {
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-drag: none;
+          }
+          .error {
+            color: gray;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes onlineAnimation {
+    0% {
+      transform: scale(1);
+      opacity: 100%;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 60%;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 100%;
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: none;
+    opacity: 0;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #863aff;
+    border-radius: 20px;
+  }
+}
